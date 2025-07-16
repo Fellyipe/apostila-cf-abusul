@@ -1,0 +1,55 @@
+body {
+  background-color: #f8f7f5;
+  font-family: "Inter", sans-serif;
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap");
+.font-logo {
+  font-family: "Playfair Display", serif;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 1.25rem;
+  top: 1rem;
+  bottom: -1rem;
+  width: 2px;
+  background-color: #d1d5db;
+  transform: translateX(-50%);
+}
+.timeline-item:last-child::before {
+  display: none;
+}
+.timeline-dot {
+  position: absolute;
+  left: 1.25rem;
+  top: 0.875rem;
+  height: 0.75rem;
+  width: 0.75rem;
+  background-color: #fff;
+  border-radius: 9999px;
+  border-width: 2px;
+  border-color: #6b7280;
+  transform: translateX(-50%);
+}
+.timeline-item.active .timeline-dot {
+  background-color: #3b82f6;
+  border-color: #3b82f6;
+}
+.nav-button.active {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f8f7f5;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
